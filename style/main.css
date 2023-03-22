@@ -1,0 +1,655 @@
+/* created by Olga Durham
+Fruit Game by Angela Abbound
+Fall Game by  Yohanes Hailegiorgis
+Soliteire Game by Aleksandr Tselikovskii
+Guess a Number by Olga Durham
+Quiz by Olga Durham
+Edited by Olga Durham
+CSS for Dark Mode by Yohanes Hailegiorgis*/
+
+:root {
+    --background: rgb(24, 110, 240);
+    --text: #D3D3D3;
+    --highlight: #000;
+    --other_dark: #34435E;
+}
+
+body {
+    color: rgb(238, 224, 203);
+    background: var(--background);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    text-align: center;
+    padding: 0.4vw;
+    margin: 0;
+    transition: 0.5s background ease;
+}
+
+
+/*toggle and themes */
+
+.theme-switch {
+    --background: #fff;
+    --text: rgb(24, 110, 240);
+    ;
+    color: var(--text);
+    width: 70px;
+    height: 30px;
+    background: var(--highlight);
+    border-radius: 50px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.theme-switch .switch {
+    background: white;
+    width: 24px;
+    height: 24px;
+    background: var(--background);
+    border-radius: 100%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: 0.5s all ease;
+}
+
+.dark-theme {
+    --background: #000;
+    background: var(--background);
+    color: var(--text);
+}
+
+.dark-theme .theme-switch {
+    background: var(--text);
+}
+
+.dark-theme .theme-switch .switch {
+    transform: translateX(37px);
+}
+
+.dark-theme-elements {
+    background: var(--other_dark);
+    color: var(--text);
+}
+
+
+/* end toggle and themes*/
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1fr;
+    grid-auto-rows: minmax(2.7vw, auto);
+    gap: 0.4vw;
+    max-width: auto;
+    max-height: auto;
+    grid-template-areas: "header header header nav" "aside main main main" "section section section section" "footer footer footer footer";
+}
+
+.navNested {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(2.7vw, auto);
+    gap: 0.4vw;
+    grid-template-areas: "p" "p" "p" "p" "p" "p" "p";
+}
+
+.headerNested {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(2.7vw, auto);
+    gap: 0.4vw;
+    grid-template-areas: "p" "div" "p";
+}
+
+.headerDiv {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(2.7vw, auto);
+    gap: 0.4vw;
+    grid-template-areas: "h2" "h1";
+}
+
+.footerNested {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(2.7vw, auto);
+    gap: 0.4vw;
+    grid-template-areas: "div div";
+}
+
+#gn {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(2.7vw, auto);
+    gap: 0.4vw;
+    grid-template-areas: "p" "p" "p";
+}
+
+#fg {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(2.7vw, auto);
+    gap: 0.4vw;
+    grid-template-areas: "p" "p" "p";
+}
+
+#fm {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(2.7vw, auto);
+    gap: 0.4vw;
+    grid-template-areas: "p" "p" "p";
+}
+
+#g5 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(2.7vw, auto);
+    gap: 0.4vw;
+    grid-template-areas: "p" "p" "p";
+}
+
+#quiz {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(2.7vw, auto);
+    gap: 0.4vw;
+    grid-template-areas: "p" "p" "p";
+}
+
+@media screen and (min-width: 1024px) {
+    #content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(2.7vw, auto);
+        gap: 0.4vw;
+        min-width: 1024px;
+        min-height: 768px;
+        max-width: auto;
+        max-height: auto;
+        grid-template-areas: "header header header header" "nav nav nav nav" "aside main main main" "section section section section" "footer footer footer footer";
+    }
+    .navNested {
+        display: grid;
+        grid-template-columns: 1.25fr 1.25fr 1.25fr 1.5fr 1.25fr 1.25fr 1.25fr;
+        grid-auto-rows: minmax(2.7vw, auto);
+        grid-template-areas: "p p p p p p p ";
+    }
+    .headerNested {
+        display: grid;
+        grid-template-columns: 0.75fr 1.5fr 0.75fr;
+        grid-auto-rows: minmax(2.7vw, auto);
+        grid-template-areas: "p div p";
+    }
+    .headerDiv {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(2.7vw, auto);
+        grid-template-areas: "h2" "h1";
+    }
+    .footerNested {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(2.7vw, auto);
+        grid-template-areas: "div div";
+    }
+    #gn {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(2.7vw, auto);
+        gap: 0.7vw;
+        grid-template-areas: "p p p";
+    }
+    #fg {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(2.7vw, auto);
+        gap: 0.7vw;
+        grid-template-areas: "p p p";
+    }
+    #fm {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(2.7vw, auto);
+        gap: 0.7vw;
+        grid-template-areas: "p p p";
+    }
+    #g5 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(2.7vw, auto);
+        gap: 0.7vw;
+        grid-template-areas: "p p p";
+    }
+    #quiz {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(2.7vw, auto);
+        gap: 0.7vw;
+        grid-template-areas: "p p p";
+    }
+    #team div {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-auto-rows: minmax(2.7vw, auto);
+        gap: 0.7vw;
+        grid-template-areas: "p p";
+    }
+}
+
+#content>* {
+    padding: 0.4vw;
+    align-items: center;
+}
+
+header {
+    grid-area: header;
+    background: rgb(240, 181, 93);
+}
+
+main {
+    grid-area: main;
+    background: rgb(238, 224, 203);
+    color: rgb(44, 19, 82);
+}
+
+section {
+    grid-area: section;
+    background: rgb(23, 129, 94);
+}
+
+aside {
+    grid-area: aside;
+    background: rgb(114, 38, 82);
+    font-style: italic;
+    font-size: 85%;
+}
+
+nav {
+    grid-area: nav;
+    background: rgb(44, 19, 82);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+footer {
+    grid-area: footer;
+    background: #2c1352;
+    color: rgb(203, 217, 240);
+}
+
+.navNested p {
+    margin: 0;
+    vertical-align: middle;
+}
+
+.headerNested p {
+    margin: 0;
+}
+
+
+/* padding responsive */
+
+.footerNested div {
+    margin: 0;
+}
+
+#gn p {
+    padding: 0.7vw;
+    margin: 0;
+}
+
+#fg p {
+    padding: 0.7vw;
+    margin: 0;
+}
+
+#fm p {
+    padding: 0.7vw;
+    margin: 0;
+}
+
+#g5 p {
+    padding: 0.7vw;
+    margin: 0;
+}
+
+#quiz p {
+    padding: 0.7vw;
+    margin: 0;
+}
+
+
+/* header image responsive*/
+
+.headerImage {
+    width: 20vw;
+    height: 18vw;
+}
+
+
+/* logo image responsive*/
+
+.logo {
+    width: 7.2vw;
+    height: 4.5vw;
+}
+
+
+/* font-size responsive */
+
+.companyName {
+    font-family: Berlin Sans FB;
+    font-size: 2.4vw;
+    color: rgb(114, 38, 82);
+}
+
+
+/* font-size responsive */
+
+.companyMoto {
+    font-family: Chiller;
+    font-size: 8.65vw;
+    color: rgb(44, 19, 82);
+    font-weight: bold;
+}
+
+a {
+    color: rgb(203, 217, 240);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(44, 19, 82);
+    min-width: 9vw;
+    box-shadow: 0px 8px 16px 0px rgb(240, 182, 95);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(203, 217, 240);
+    font-size: 80%;
+    font-weight: bolder;
+    padding: 0.84vw 1.12vw;
+    text-decoration: underline;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(160, 117, 230);
+    color: rgb(44, 19, 82);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.gamePicture {
+    width: 80%;
+}
+
+table,
+th,
+td {
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+/* table text responsive */
+
+#bagptable {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 1.5vw;
+}
+
+
+/* table text responsive */
+
+#wshtable {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 1.5vw;
+}
+
+#wshtable p {
+    margin: 2vw;
+}
+
+.footerlogo {
+    text-align: start;
+}
+
+
+/* footersddress text responsive */
+
+.footeraddress {
+    text-align: end;
+    font-size: 1vw;
+}
+
+th {
+    opacity: 75%;
+    font-size: large;
+}
+
+td {
+    font-size: large;
+}
+
+strong {
+    font-size: 120%;
+}
+
+.teamimg {
+    width: 45%;
+}
+
+.gamehistory {
+    width: 85%;
+}
+
+
+/* guess number game  */
+
+#gnOutput {
+    color: rgb(238, 224, 203);
+}
+
+#gnNumber {
+    border: none;
+    background: rgb(238, 224, 203);
+    padding: .5vw;
+    border-radius: .5vw;
+    width: 35%;
+    outline: none;
+    font-size: 5vw;
+    text-align: center;
+    color: rgb(243, 106, 8);
+    font-weight: bolder;
+    font-family: Chiller;
+}
+
+input:focus::placeholder {
+    color: rgb(182, 179, 179);
+    font-size: 1.2vw;
+}
+
+input::placeholder {
+    color: #c852f7;
+    font-size: 1.9vw;
+    transition: color 0.3s case;
+}
+
+#gndiv {
+    background: rgba(44, 19, 82, 0.596);
+    padding: 3vw;
+    border-radius: 1.5vw;
+}
+
+
+/* fruit memory game  */
+
+.mggrid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 110%;
+    margin-left: 2%;
+}
+
+#mggrid img {
+    width: 20%;
+    padding: 1%;
+}
+
+#fmdiv {
+    background: rgba(44, 19, 82, 0.596);
+    padding: 2vw;
+    border-radius: 1.5vw;
+}
+
+#results {
+    color: rgb(243, 106, 8);
+    font-weight: bolder;
+    font-family: Chiller;
+    font-size: 3vw;
+}
+
+#fmscore {
+    color: rgb(101, 125, 202);
+    font-weight: bolder;
+    font-family: Chiller;
+    font-size: 2.5vw;
+}
+
+
+/* fall game  */
+
+#game {
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#character {
+    width: 1.8vw;
+    height: 1.8vw;
+    background-color: rgb(243, 106, 8);
+    border-radius: 50%;
+    position: relative;
+    top: 400px;
+    left: 190px;
+    z-index: 1000000;
+}
+
+.block {
+    width: 400px;
+    height: 20px;
+    background-color: rgb(101, 125, 202);
+    position: relative;
+    top: 100px;
+    margin-top: -20px;
+}
+
+.hole {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    position: relative;
+    top: 100px;
+    margin-top: -20px;
+}
+
+button {
+    background-color: #7aafa4;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 16px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.game-button {
+    text-align: center;
+    padding: 10px;
+}
+
+input[type=submit],
+input[type=reset] {
+    background-color: rgb(121, 174, 163);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 16px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#fgdiv {
+    background: rgba(46, 20, 85, 0.596);
+    padding: 3vw;
+    border-radius: 1.5vw;
+}
+
+#fgOutput {
+    color: rgb(238, 224, 203);
+}
+
+
+/* solitaire */
+
+.solitaire {
+    background: rgba(44, 19, 82, 0.596);
+    padding: 1.5vw;
+    border-radius: 1.5vw;
+}
+
+
+/* quiz */
+
+.correct {
+    color: rgb(104, 128, 206);
+    font-weight: bold;
+}
+
+.incorrect {
+    color: rgb(204, 91, 83);
+    font-weight: bold;
+}
+
+.question {
+    color: rgb(240, 182, 95);
+    font-weight: bold;
+    font-size: 90%;
+}
+
+#dvTrue1,
+#dvFalse1,
+#dvTrue2,
+#dvFalse2,
+#dvTrue3,
+#dvFalse3 {
+    display: none;
+}
+
+.qdiv {
+    background: rgba(44, 19, 82, 0.596);
+    padding: 1vw;
+    border-radius: 1.5vw;
+    width: 100%;
+    color: #f16a09;
+    font-weight: bolder;
+    font-family: Chiller;
+    font-size: 180%;
+}

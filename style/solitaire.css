@@ -1,0 +1,219 @@
+/* created by Aleksandr Tselikovskii */
+
+.cardsDisplay {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* 9 rows */
+    grid-column-gap: 1%;
+    /* grid-row-gap: 1%;*/
+    /* background-color: rgb(23, 129, 94); */
+    padding: 15px 10px 20px 15px;
+    width: 850px;
+    height: 650px;
+    overflow: auto;
+}
+
+.cardsDisplay button {
+    border: none;
+    border-radius: 5px;
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    margin-bottom: 3%;
+}
+
+#reset {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 90%;
+    border: none;
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    background-color: rgb(123, 219, 184);
+    color: black;
+    border-radius: 30px 15px 50px;
+}
+
+#reset:hover {
+    background-color: rgb(3, 109, 74);
+    color: white;
+}
+
+#reset:active {
+    background-color: rgb(13, 119, 84);
+    box-shadow: 2px 2px black;
+    transform: translateY(3px);
+}
+
+.cardsDisplay img {
+    width: 70px;
+    vertical-align: middle;
+    margin: 3px 0 3px 0;
+    opacity: 1.0;
+}
+
+img.cardImage {
+    opacity: 1.0;
+}
+
+img.cardImage:hover {
+    opacity: 0.5;
+}
+
+.cardsDisplay button:active {
+    background-color: bisque;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    box-shadow: 0 4px 8px 0 black, 0 3px 4px 0 black;
+}
+
+.display {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1%;
+    grid-row-gap: 10%;
+    /* background-color: rgb(23, 129, 94); */
+    color: white;
+    padding: 5px 10px 30px 15px;
+    width: 850px;
+    height: 5px;
+    font-family: displayFont, Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    text-align: center;
+}
+
+#timer {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(123, 219, 184);
+    color: black;
+    width: 80%;
+    border-radius: 15px 50px 30px;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+#score {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(123, 219, 184);
+    color: black;
+    width: 80%;
+    border-radius: 50px 15px;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+#help {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border: none;
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    background-color: rgb(123, 219, 184);
+    color: black;
+    padding: 5px;
+    width: 80%;
+    border-radius: 15px 50px;
+    margin-bottom: 3%;
+}
+
+#help:hover {
+    background-color: rgb(3, 109, 74);
+    color: white;
+}
+
+#help:active {
+    background-color: rgb(13, 119, 84);
+    box-shadow: 2px 2px black;
+    transform: translateY(3px);
+}
+
+
+/* Popup */
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+/* The actual popup */
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(123, 219, 184);
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10% 10%;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -100px;
+    border-radius: 15px 50px;
+}
+
+
+/* Popup arrow */
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(123, 219, 184) transparent transparent transparent;
+}
+
+
+/* Hhide/show the popup) */
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+
+/* Animation */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.upperInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 1%;
+    grid-row-gap: 1%;
+    background-color: rgb(23, 129, 94);
+    color: white;
+    padding: 5px 10px 5px 15px;
+    width: 850px;
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    text-align: left;
+}
