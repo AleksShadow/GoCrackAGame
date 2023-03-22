@@ -1,0 +1,42 @@
+/* created by Aleksandr Tselikovskii */
+
+input[type=text],
+select,
+textarea {
+    font-size: large;
+    color: rgb(44, 19, 82);
+    width: 50%;
+    padding: 1.5% 1%;
+    margin: 1% 0;
+    display: inline-block;
+    border: 1px solid rgb(23, 129, 94);
+    box-sizing: border-box;
+    border-radius: 1vw;
+}
+
+textarea {
+    height: 20vw;
+}
+
+input[type=submit],
+input[type=reset] {
+    width: 50%;
+    background-color: rgb(23, 129, 94);
+    color: rgb(238, 224, 203);
+    padding: 2% 2%;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover {
+    opacity: 0.7;
+}
+
+.alert {
+    color: red;
+    font-weight: bold;
+    font-size: large;
+    line-height: 150%;
+}
