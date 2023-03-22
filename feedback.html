@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Olga Durham">
+    <meta name="email" content="shap0011@algonquincollege.com">
+    <meta name="author" content="Aleksandr Tselikovskii">
+    <meta name="email" content="tsel0003@algonquinlive.com">
+    <meta name="author" content="Angela Abbound">
+    <meta name="email" content="abbo0110@algonquinlive.com">
+    <meta name="author" content="Yohanes Hailegiorgis">
+    <meta name="email" content="hail0061@algonquinlive.com">
+
+    <title>Game Place For Everyone</title>
+
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/validation.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="scripts/toggledarkmode.js"></script>
+
+</head>
+
+<body>
+    <div class="theme-switch">
+        <div class="switch"></div>
+    </div>
+    <div id="content">
+
+        <header class="headerNested">
+            <p>
+                <img class="headerImage" src="./images/Game-Console.png" alt="Game-Console">
+            </p>
+            <div class="headerDiv">
+                <p class="companyName">Game Place For Everyone</p>
+                <p class="companyMoto">Go Crack a Game</p>
+            </div>
+            <p>
+                <img class="headerImage" src="./images/dice.png" alt="Dice">
+            </p>
+        </header>
+        <main>
+            <h2>Have questions or general inquiries? Please fill the form below:</h2>
+
+            <form name="gameForm">
+                <label for="clientname">Your Name</label><br>
+                <input type="text" id="clientname" name="clientname" value=""><br>
+                <span id="nameError" class="alert"></span><br>
+
+                <label for="phoneNumber">Phone Number</label><br>
+                <input type="text" id="phoneNumber" name="phoneNumber" value=""><br>
+                <span class="alert" id="phoneNumberError"></span><br>
+
+                <label for="clientemail">Email</label><br>
+                <input type="text" id="clientemail" name="clientemail" value=""><br>
+                <span class="alert" id="clientemailError"></span><br>
+
+                <label for="city">City</label><br>
+                <input type="text" id="city" name="city"><br>
+                <span class="alert" id="cityError"></span><br>
+
+                <label for="province">Province</label><br>
+                <select id="province" name="province">
+                    <option value="">Select Province</option>
+                    <option value="AB">Alberta</option>
+                    <option value="BC">British Columbia</option>
+                    <option value="MB">Manitoba</option>
+                    <option value="NB">New Brunswick</option>
+                    <option value="NL">Newfoundland and Labrador</option>
+                    <option value="NS">Nova Scotia</option>
+                    <option value="ON">Ontario</option>
+                    <option value="PE">Prince Edward Island</option>
+                    <option value="QC">Quebec</option>
+                    <option value="SK">Saskatchewan</option>
+                    <option value="NT">Northwest Territories</option>
+                    <option value="NU">Nunavut</option>
+                    <option value="YT">Yukon</option>
+                </select><br>
+                <span class="alert" id="provinceError"></span><br>
+
+                <label for="country">Country</label><br>
+                <select id="country" name="country">
+                  <option value="">Select Country</option>
+                  <option value="CA">Canada</option>
+                  <option value="US">United States</option>
+                  <option value="OTH">Other</option>
+                </select> <br>
+                <span class="alert" id="countryError"></span><br><br>
+
+                <label for="subject">Subject</label><br>
+                <input type="text" id="subject" name="subject" value=""><br>
+                <span class="alert" id="subjectError"></span><br><br>
+
+                <label for="message">Message</label><br>
+                <textarea name="message"></textarea>
+
+                <input type="submit" value="Send"><br>
+                <input type="reset">
+            </form>
+        </main>
+        <section>
+            <h2>You are on the "The Game Place For Everyone" Feedback Page.</h2>
+            <p>
+                Please, add a comment and let us know how we can improve our web site appearance and functionality.<br> To return to the welcome page press <a href="index.html">Home</a>.
+            </p>
+        </section>
+        <aside>
+            <h3>The most popular interactive games</h3>
+            <blockquote cite="https://www.playmeo.com/top-ten-interactive-group-games/">
+                <p>
+                    Bone China, also called fine bone china, bone porcelain, is a type of ceramic that uses bone ash, clay, feldspathic material and kaolin as basic material.
+                </p>
+            </blockquote>
+            &mdash; <cite><a href="https://www.playmeo.com/top-ten-interactive-group-games/">Top 10
+                    Interactive Group Games</a></cite><br /><br />
+        </aside>
+        <nav class="navNested">
+            <p><a href="index.html">Home</a></p>
+            <div class="dropdown">
+                <p><a href="playroom.html">Play Room</a></p>
+                <div class="dropdown-content">
+                    <a href="playroom.html">Play All</a>
+                    <a href="playroom.html#gng">Guess a Number</a>
+                    <a href="playroom.html#fgg">Fall Game</a>
+                    <a href="playroom.html#fmg">Fruit Memory</a>
+                    <a href="playroom.html#g5g">Solitaire</a>
+                    <a href="playroom.html#quizg">Quiz</a>
+                </div>
+            </div>
+            <p><a href="areyougame.html">Are You Game?</a></p>
+            <p>
+                <img class="logo" src="./images/game-logo.png" alt="Website logo">
+            </p>
+            <p><a href="webgameshistory.html">Web Games History</a></p>
+            <p><a href="aboutus.html">About Us</a></p>
+            <p><a href="aboutus.html#contact">Contact</a></p>
+        </nav>
+        <footer class="footerNested">
+            <div class="footerlogo">
+                <img class="logo" src="./images/game-logo.png" alt="Website logo">
+            </div>
+            <div class="footeraddress">
+                <address>
+                    987 Game Place Street<br>
+                    Ottawa, Ontario
+                </address> (613) 987-GAME<br>
+                <a href="mailto:gameplace@interactivelearning.ca?subject=inquiry%20from%20website">
+                    gameplace@interactivelearning.ca</a>
+            </div>
+        </footer>
+    </div>
+    <script src="scripts/validate.js"></script>
+    <script src="scripts/events.js"></script>
+</body>
+
+</html>

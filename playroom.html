@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Olga Durham">
+    <meta name="email" content="shap0011@algonquincollege.com">
+    <meta name="author" content="Aleksandr Tselikovskii">
+    <meta name="email" content="tsel0003@algonquinlive.com">
+    <meta name="author" content="Angela Abbound">
+    <meta name="email" content="abbo0110@algonquinlive.com">
+    <meta name="author" content="Yohanes Hailegiorgis">
+    <meta name="email" content="hail0061@algonquinlive.com">
+
+    <title>Game Place For Everyone</title>
+
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/solitaire.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="scripts/toggledarkmode.js"></script>
+</head>
+
+<body>
+    <div class="theme-switch">
+        <div class="switch"></div>
+    </div>
+    <div id="content">
+
+        <header class="headerNested">
+            <p>
+                <img class="headerImage" src="./images/Game-Console.png" alt="Game-Console">
+            </p>
+            <div class="headerDiv">
+                <p class="companyName">Game Place For Everyone</p>
+                <p class="companyMoto">Go Crack a Game</p>
+            </div>
+            <p>
+                <img class="headerImage" src="./images/dice.png" alt="Dice">
+            </p>
+        </header>
+        <main>
+            <h2>Play Room the Key to Success</h2>
+            <p>
+                Welcome to the Play Room. Here you will find a variety of different games programmed especially for this website. <br>Take a look at how simple they might appear, but in reality there is code that makes them come alive. <br>These games
+                will challenge your intellect and skills.
+                <br>Take a look and enjoy! </p>
+        </main>
+        <section id="gamesgalery">
+            <h3 id="gng">GUESS A NUMBER</h3>
+            <div id="gn">
+                <p><br><br><img class="gamePicture" src="./images/numbers.png" alt="Guess a Number game image"></p>
+                <div id="gndiv">
+                    <label id="gnrequest">Please, guess a number between 1 and 10</label><br><br>
+                    <label>
+                        <input type="text" id="gnNumber" value="" placeholder="Enter a Number">
+                    </label><br><br>
+                    <button id="gnButton">submit</button>
+                    <a href="playroom.html"><input type="reset"></a>
+                </div>
+                <p id="gnOutput"><br><br><img class="gamePicture" src="./images/numbers2.png" alt="Find a Color game image"></p>
+            </div>
+            <h3 id="fgg">FALL GAME</h3>
+            <div id="fg">
+                <p><br><img class="gamePicture" src="./images/fall-game2.png" alt="Guess a Number game image"></p>
+                <div id="fgdiv">
+                    <p id="fgrequest">Use the cursor keys to move <br>the ball to the right or left</p>
+                    <div id="game">
+                        <div id="character"></div>
+                    </div>
+                    <div class="game-button">
+                        <button id="start">start</button>
+                        <button id="stop">stop</button>
+                        <a href="playroom.html"><input type="reset"></a>
+                    </div>
+                </div>
+                <p id="fgOutput"><br><img class="gamePicture" src="./images/fall-game2.png" alt="Find a Color game image"></p>
+            </div>
+            <h3 id="fmg">FRUIT MEMORY GAME</h3>
+            <div id="fm">
+                <p><br><img class="gamePicture" src="./images/fruits.png" alt="Fruit Memory Game image"></p>
+                <div id="fmdiv">
+                    <label id="fmrequest">Click on cards</label>
+                    <br>
+                    <label><span id="fmscore">Score:</span>&nbsp;&nbsp;&nbsp;<span id="results"></span></label><br><br>
+
+                    <label id='mggrid' class="mggrid"></label><br>
+                    <button id="fmstart">start</button>
+                    <a href="playroom.html"><input type="reset"></a>
+                </div>
+                <p id="mgOutput"><br><img class="gamePicture" src="./images/fruits2.png" alt="Fruit Memory Game image"></p>
+            </div>
+            <h3 id="g5g">SOLITAIRE GAME</h3>
+            <div id="g5">
+                <p><br><br><img class="gamePicture" src="./images/solitaire/solitaire.png" alt="Solitaire Game image"></p>
+                <div class="solitaire">
+                    <div class="display">
+                        <div id="timer"></div>
+                        <div id="score"></div>
+                        <div class="popup" id='help' onclick="help()">Help
+                            <span class="popuptext" id="myPopup">Rules of Solitaire...<br>
+                                    This Solitaire belongs to that amazing type of puzzle problems, 
+                                    which in their combinational capabilities are almost as good 
+                                    as chess puzzles. At the same time, the unfolding of this solitaire 
+                                    plays the role of emotional relaxation. This Solitaire involves 
+                                    the layout of cards according to certain rules: it is necessary 
+                                    to clean this card field, removing two cards of the same rank 
+                                    in one move - two deuces, two queens, etc. You can use the last 
+                                    cards of vertical columns only. To cancel the selected card, 
+                                    click on any other in the last rows.
+                                </span>
+                        </div>
+                        <div><button id='reset' onclick="reset()">Shuffle</button></div>
+                    </div>
+                    <div class="cardsDisplay">
+                    </div>
+                    <div class="game-button">
+                        <button id="start2">start</button>
+                        <button id="stop2">stop</button>
+                        <a href="playroom.html"><input type="reset"></a>
+                    </div>
+                </div>
+                <p id="mgOutput"><br><br><img class="gamePicture" src="./images/solitaire/solitaire.png" alt="Solitaire Game image"></p>
+            </div>
+            <h3 id="quizg">QUIZ</h3>
+            <div id="quiz">
+                <p><br><img class="gamePicture" src="./images/quiz.png" alt="Quiz image"></p>
+                <div class="qdiv"><br>
+                    <span class="question">Toronto is the capital of Canada.</span>
+                    <label for="chkTrue1"><input type="radio" id="chkTrue1" name="chkAnswer" onclick="ShowHideDiv()"/>True</label>
+                    <label for="chkFalse1"><input type="radio" id="chkFalse1" name="chkAnswer" onclick="ShowHideDiv()"/>False</label>
+                    <hr/><br>
+                    <label id="dvTrue1"><span class="false"><span class="incorrect">Incorrect. The capital of Canada is Ottawa.</span><hr/></label>
+                    <label id="dvFalse1"><span class="false"><span class="correct">Correct. Toronto is not the capital of Canada.</span><hr/></label><br>
+                    <span class="question">Justin Trudeau is the Head of State in Canada.</span>
+                    <label for="chkTrue2"><input type="radio" id="chkTrue2" name="chkAnswer" onclick="ShowHideDiv()"/>True</label>
+                    <label for="chkFalse2"><input type="radio" id="chkFalse2" name="chkAnswer" onclick="ShowHideDiv()"/>False</label>
+                    <hr/><br>
+                    <label id="dvTrue2"><span class="false"><span class="incorrect">Incorrect. The Head of State in Canada is Elizabeth II.</span><hr/></label>
+                    <label id="dvFalse2"><span class="false"><span class="correct">Correct. Justin Trudeau is not the Head of State in Canada.</span><hr/></label><br>
+                    <span class="question">The national sport in Canada is lacrosse.</span>
+                    <label for="chkTrue3"><input type="radio" id="chkTrue3" name="chkAnswer" onclick="ShowHideDiv()"/>True</label>
+                    <label for="chkFalse3"><input type="radio" id="chkFalse3" name="chkAnswer" onclick="ShowHideDiv()"/>False</label>
+                    <hr/><br>
+                    <label id="dvTrue3"><span class="false"><span class="correct">Correct. The lacrosse is the national sport in Canada.</span><hr/></label>
+                    <label id="dvFalse3"><span class="false"><span class="incorrect">Incorrect. The national sport in Canada is lacrosse.</span><hr/></label><br>
+                    <a href="playroom.html"><input type="reset"></a>
+                </div>
+                <p>
+                    <label id="mgOutput"><br><img class="gamePicture" src="./images/quiz2.png" alt="Quiz image"></label>
+                </p>
+            </div>
+        </section>
+        <aside>
+            <h3>Don't worry, interactivity games takes care</h3>
+            <blockquote cite="https://thenerdstash.com/important-interactivity-within-games/">
+                <p>
+                    There are various mediums in which we garner entertainment. We enjoy books because they create entire worlds with words, in which we can empathize with the perspective of a fictionalized character. However, others find more enjoyment from...
+                </p>
+            </blockquote>
+            &mdash; <cite><a href="https://thenerdstash.com/important-interactivity-within-games/">How
+                    Important is Interactivity Within Games?</a></cite><br /><br />
+        </aside>
+        <nav class="navNested">
+            <p><a href="index.html">Home</a></p>
+            <div class="dropdown">
+                <p><a href="playroom.html">Play Room</a></p>
+                <div class="dropdown-content">
+                    <a href="playroom.html">Play All</a>
+                    <a href="playroom.html#gng">Guess a Number</a>
+                    <a href="playroom.html#fgg">Fall Game</a>
+                    <a href="playroom.html#fmg">Fruit Memory</a>
+                    <a href="playroom.html#g5g">Solitaire</a>
+                    <a href="playroom.html#quizg">Quiz</a>
+                </div>
+            </div>
+            <p><a href="areyougame.html">Are You Game?</a></p>
+            <p>
+                <img class="logo" src="./images/game-logo.png" alt="Website logo">
+            </p>
+            <p><a href="webgameshistory.html">Web Games History</a></p>
+            <p><a href="aboutus.html">About Us</a></p>
+            <p><a href="aboutus.html#contact">Contact</a></p>
+        </nav>
+        <footer class="footerNested">
+            <div class="footerlogo">
+                <img class="logo" src="./images/game-logo.png" alt="Website logo">
+            </div>
+            <div class="footeraddress">
+                <address>
+                    987 Game Place Street<br>
+                    Ottawa, Ontario
+                </address> (613) 987-GAME<br>
+                <a href="mailto:gameplace@interactivelearning.ca?subject=inquiry%20from%20website">
+                    gameplace@interactivelearning.ca</a>
+            </div>
+        </footer>
+
+    </div>
+    <script src="scripts/guessanumbergame.js"></script>
+    <script src="scripts/memorygame.js"></script>
+    <script src="scripts/fallgame.js"></script>
+    <script src="scripts/quiz.js"></script>
+    <script src="scripts/solitairegame.js"></script>
+</body>
+
+</html>
